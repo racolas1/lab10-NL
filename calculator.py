@@ -1,9 +1,7 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+#https://github.com/racolas1/lab10-NL
+# Partner 1: Nikolas Lima
+# Partner 2: Nikolas Lima
 
-One function per operation, in order.
-"""
 import math
 
 def square_root(a):
@@ -12,14 +10,14 @@ def square_root(a):
             raise ValueError("a must be non-negative")
         return math.sqrt(a)
     except TypeError:
-        raise TypeError("a must be an integer")
+        raise TypeError("a must be a number")
 
 
 def hypotenuse(a, b):
     try:
         return math.hypot(a, b)
     except TypeError:
-        raise TypeError("Both inputs must be integers")
+        raise TypeError("Both inputs must be numbers")
 
 def add(a, b):
     return a + b
@@ -36,11 +34,11 @@ def div(a, b):
     return b / a
 
 def log(a, b):
-    if a <= 0 or a == 1:
+    if b <= 0 or b == 1:
         raise ValueError("base must be positive and not equal to 1")
-    if b <= 0:
-        raise ValueError("must be positive")
-    return math.log(a, b)
+    if a <= 0:
+        raise ValueError("argument must be positive")
+    return math.log(a,b)
 
 def exp(a, b):
     return a ** b
