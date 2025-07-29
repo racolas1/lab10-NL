@@ -8,4 +8,6 @@ One function per operation, in order.
 def add(a, b): 
     pass
 
+def function_name():
+	return value
 
