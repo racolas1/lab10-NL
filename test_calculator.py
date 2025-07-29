@@ -11,28 +11,28 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(5.4, 1.8), 7.2)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(add(4, 5), -1)
-        self.assertEqual(add(3, -1), 4)
-        self.assertEqual(add(5.4, 1.8), 3.6)
+        self.assertEqual(subtract(4, 5), -1)
+        self.assertEqual(subtract(3, -1), 4)
+        self.assertEqual(subtract(5.4, 1.8), 3.6)
 
     def test_multiply(self): # 3 assertions
-        self.assertEqual(add(4, 5), 20)
-        self.assertEqual(add(3, -1), -3)
-        self.assertEqual(add(5.4, 1.8), 9.72)
+        self.assertEqual(mul(4, 5), 20)
+        self.assertEqual(mul(3, -1), -3)
+        self.assertEqual(mul(5.4, 1.8), 9.72)
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(add(4, 4), 1)
-        self.assertEqual(add(-1, 3), -3)
-        self.assertEqual(add(6, 3), 0.5)
+        self.assertEqual(div(4, 4), 1)
+        self.assertEqual(div(-1, 3), -3)
+        self.assertEqual(div(6, 3), 0.5)
 
     def test_divide_by_zero(self): # 1 assertion
         with self.assertRaises(ZeroDivisionError):
             div(0, 5)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(10, 1000), 3)
-        self.assertEqual(log(0.5, 2), -1)
-        self.assertEqual(log(2, 2), 1)
+        self.assertEqual(logarithm(10, 1000), 3)
+        self.assertEqual(logarithm(0.5, 2), -1)
+        self.assertEqual(logarithm(2, 2), 1)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
